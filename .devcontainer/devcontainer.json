@@ -1,0 +1,377 @@
+{
+    "name": "next-app",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "next-ap",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // ====================================
+                // ファイル保存時の設定
+                // ====================================
+                // 自動保存設定をする
+                "files.autoSave": "afterDelay",
+                // ====================================
+                // ファイル保存時に行われるアクション
+                // ====================================
+                // ファイル保存時、コードを整形する
+                "editor.formatOnSave": true,
+
+                // ファイル保存時、同時に行われるアクション
+                "editor.codeActionsOnSave": {
+                    // 拡張機能Prettierのチェックを走らせる
+                    "source.fixAll.prettier": true
+                },
+                // ファイル保存時、最終行に改行を挿入する
+                "files.insertFinalNewline": true,
+                // ファイル保存時、最終行以降の空行を削除する
+                "files.trimFinalNewlines": true,
+                // ファイル保存時、末尾の空白をトリミングする
+                "files.trimTrailingWhitespace": true,
+                // ====================================
+                // エディタ全体のUIに関する設定
+                // ====================================
+                // テーマカラー
+                "workbench.colorTheme": "GitHub Dark Default",
+                // ミニマップを表示する
+                "editor.minimap.enabled": false,
+                // ファイルのパンくずリストを表示する
+                "breadcrumbs.enabled": false,
+                // メニューバーを表示する (toggle: Altキーで上部に表示する)
+                //"window.menuBarVisibility": "toggle",
+                // アクティビティーバーの表示設定
+                //"workbench.activityBar.visible": false,
+                // ====================================
+                // エディタのUIに関する詳細設定
+                // ====================================
+                // タブサイズ
+                "editor.tabSize": 4,
+                // インデントガイドを表示する
+                "editor.guides.indentation": false,
+                // 括弧（ブラケット）のペアガイドを表示する
+                "editor.guides.bracketPairs": true,
+                // 括弧（ブラケット）の水平方向のペアガイドを表示する
+                "editor.guides.bracketPairsHorizontal": true,
+                // 括弧（ブラケット）のペアごとに色を分ける
+                "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+                // 選択範囲のハイライトに角丸を適用する
+                "editor.roundedSelection": false,
+                // sticky scrollの設定
+                "editor.stickyScroll.enabled": true,
+                "editor.stickyScroll.maxLineCount": 5,
+                // ====================================
+                // エディタのタイポグラフィーに関する設定
+                // ====================================
+                // フォント
+                //"editor.fontFamily": "Hack, 'Noto Sans JP', monospace",
+                // 文字サイズ
+                "editor.fontSize": 15,
+                // 文字間隔
+                "editor.letterSpacing": -0.4,
+                // 行間
+                "editor.lineHeight": 1.48,
+                // テーマカラーのカスタマイズ
+                "editor.tokenColorCustomizations": {
+                    // コメントアウト
+                    "comments": "#999"
+                },
+                // ====================================
+                // ワークベンチの設定
+                // ====================================
+                // アイコンテーマ
+                "workbench.iconTheme": "material-icon-theme",
+                // ツリーのインデント
+                "workbench.tree.indent": 18,
+                // ツリーのインデントガイドを表示する
+                "workbench.tree.renderIndentGuides": "always",
+                // アニメーションを減らす
+                "workbench.reduceMotion": "on",
+                // 新規ファイル作成時、ヒントメッセージを表示する
+                "workbench.editor.untitled.hint": "hidden",
+                // ====================================
+                // ターミナルの設定
+                // ====================================
+                // ターミナルの文字サイズ
+                "terminal.integrated.fontSize": 14,
+                // ターミナルの行間
+                "terminal.integrated.lineHeight": 1.25,
+                // 新規ターミナル画面の表示位置
+                "terminal.integrated.defaultLocation": "editor",
+                // ====================================
+                // キャレットの設定
+                // ====================================
+                // エディタのキャレットの幅
+                "editor.cursorWidth": 3,
+                // エディタのキャレットアニメーション
+                "editor.cursorBlinking": "phase",
+                // ターミナルのキャレットのスタイル
+                "terminal.integrated.cursorStyle": "block",
+                // ターミナルのキャレットアニメーション
+                "terminal.integrated.cursorBlinking": true,
+                "workbench.colorCustomizations": {
+                    // エディタのキャレットカラー
+                    "editorCursor.foreground": "#f00058",
+                    // ターミナルのキャレットカラー
+                    "terminalCursor.foreground": "#efff0b"
+                },
+                // ====================================
+                // フォーマッターとコード整形に関する設定
+                // ====================================
+                // 入力時、コードを自動的に整形をする
+                "editor.formatOnType": true,
+                // ペースト時、コードを自動的に整形をする
+                "editor.formatOnPaste": true,
+                // デフォルトのフォーマッターを設定する
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode",
+                    "editor.codeActionsOnSave": {
+                        // ファイル保存時に ESLint でフォーマットする
+                        "source.fixAll.eslint": true
+                    }
+                },
+                "[php]": {
+                    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+                },
+                // ====================================
+                // 言語別個別設定
+                // ====================================
+                // 【JavaScript】自動インポートを有効にする
+                "javascript.suggest.autoImports": true,
+                // 【JavaScript】インポートパスの自動更新を有効にする
+                "javascript.updateImportsOnFileMove.enabled": "always",
+                // ====================================
+                // その他の設定
+                // ====================================
+                // 空フォルダがある場合、コンパクト形式で表示する
+                "explorer.compactFolders": false,
+                // インデントの自動検出を設定する
+                "editor.detectIndentation": false,
+                // インデントを空白（半角スペース）に設定する
+                "editor.insertSpaces": true,
+                // 区切り文字（単語の境界文字）を設定する
+                "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+                // スニペットのサジェスト位置を設定する
+                "editor.snippetSuggestions": "top",
+                // 小文字検索の場合、大文字と小文字を区別せずに検索し、それ以外の場合は区別して検索する（ファイル検索のみに適用）
+                "search.smartCase": true,
+                // デフォルトのLint機能を有効にする
+                "scss.validate": false,
+                "css.validate": false,
+                // ====================================
+                // 拡張機能の個別設定
+                // ====================================
+                // ------------------------------------
+                // indent-rainbow
+                // ------------------------------------
+                // インデントカラー
+                "indentRainbow.colors": [
+                    "rgba(153, 40, 57, 0.24)",
+                    "rgba(111, 115, 30, 0.24)",
+                    "rgba(30, 115, 102, 0.24)",
+                    "rgba(85, 30, 115, 0.24)"
+                ],
+                // ------------------------------------
+                // Live Server
+                // ------------------------------------
+                // 起動時、IPアドレスをローカルIP形式に変更する
+                //"liveServer.settings.useLocalIp": true,
+                // 起動できなかった場合、ポップアップメッセージを非表示にする
+                //"liveServer.settings.donotShowInfoMsg": true,
+                // 起動時、HTMLファイル上にタグがない場合のエラーメッセージを非表示にする
+                //"liveServer.settings.donotVerifyTags": true,
+                // ------------------------------------
+                // CodeSnap
+                // ------------------------------------
+                // 背景色
+                "codesnap.backgroundColor": "#70cdc9",
+                // エディタの影
+                "codesnap.boxShadow": "rgba(0, 0, 0, 0.2) 0px 20px 100px",
+                // エディタの行番号表示
+                "codesnap.showLineNumbers": false,
+                // シャッターボタン機能設定
+                "codesnap.shutterAction": "copy",
+                // ------------------------------------
+                // Code Spell Checker
+                // ------------------------------------
+                // 単語登録（VScode全体に適用）
+                "cSpell.userWords": [
+                    "tailwindcss",
+                    "devcontainers",
+                    "Noto",
+                    "esbenp",
+                    "rgba",
+                    "donot",
+                    "codesnap",
+                    "CEINTL",
+                    "dbaeumer",
+                    "ionutvmi",
+                    "Gruntfuggly",
+                    "oderwat",
+                    "formulahendry",
+                    "Mithril",
+                    "mosapride",
+                    "zenkaku",
+                    "ecmel",
+                    "Zignd",
+                    "pranaygp",
+                    "pucelle",
+                    "Quokka",
+                    "kisstkondoros",
+                    "codemetrics",
+                    "bierner",
+                    "eamodio",
+                    "hediet",
+                    "drawio",
+                    "adpyke",
+                    "codesnap",
+                    "humao",
+                    "kohler",
+                    "ritwickdey",
+                    "dariofuzinato",
+                    "dsznajder",
+                    "Intelephense",
+                    "bmewburn",
+                    "xdebug",
+                    "neilbrayfield",
+                    "docblocker",
+                    "Laravel",
+                    "Inteli",
+                    "bradlc",
+                    "tailwindcss"
+                ],
+                // ------------------------------------
+                // Prettier
+                // ------------------------------------
+                //タブは半角4つ
+                "prettier.tabWidth": 4,
+                //シングルクォーテーションにする
+                "prettier.singleQuote": true,
+                //行末にセミコロンを追加する
+                "prettier.semi": true,
+                //改行の文字コードをLFにする
+                "prettier.endOfLine": "lf"
+                // ------------------------------------
+                // PHP Intelephense
+                // ------------------------------------
+                //"intelephense.diagnostics.undefinedClassConstants": false,
+                //"intelephense.diagnostics.undefinedConstants": false,
+                //"intelephense.diagnostics.undefinedFunctions": false,
+                //"intelephense.diagnostics.undefinedMethods": false,
+                //"intelephense.diagnostics.undefinedProperties": false,
+                //"intelephense.diagnostics.undefinedTypes": false
+            },
+            "extensions": [
+                //基本的な機能
+                // ====================================
+                // 基本的な機能
+                // ====================================
+                //Japanese Language Pack for Visual Studio Code
+                "MS-CEINTL.vscode-language-pack-ja",
+                //GitHub Theme
+                "GitHub.github-vscode-theme",
+                //vscode-icons
+                //"vscode-icons-team.vscode-icons",
+                //Material Icon Theme
+                "PKief.material-icon-theme",
+                //ESLint
+                "dbaeumer.vscode-eslint",
+                //Prettier - Code formatter
+                "esbenp.prettier-vscode",
+                //Code Spell Checker
+                "streetsidesoftware.code-spell-checker",
+                //Path Autocomplete
+                "ionutvmi.path-autocomplete",
+                //#Todo Tree
+                "Gruntfuggly.todo-tree",
+                //indent-rainbow
+                "oderwat.indent-rainbow",
+                //Auto Close Tag
+                "formulahendry.auto-close-tag",
+                //Auto Rename Tag
+                "formulahendry.auto-rename-tag",
+                //Mithril Emmet
+                //"FallenMax.mithril-emmet",
+                //zenkaku
+                "mosapride.zenkaku",
+                //Template String Converter
+                "meganrogge.template-string-converter",
+                //HTML CSS Support
+                "ecmel.vscode-html-css",
+                //IntelliSense for CSS class names in HTML
+                "Zignd.html-css-class-completion",
+                //CSS Peek
+                "pranaygp.vscode-css-peek",
+                //CSS Navigation
+                "pucelle.vscode-css-navigation",
+                //Quokka.js
+                //"WallabyJs.quokka-vscode",
+                //CodeMetrics
+                "kisstkondoros.vscode-codemetrics",
+                //Better Comments
+                "aaron-bond.better-comments",
+                //Markdown Preview Mermaid Support
+                "bierner.markdown-mermaid",
+                //GitLens — Git supercharged
+                "eamodio.gitlens",
+                //hediet.vscode-drawio
+                "hediet.vscode-drawio",
+                //CodeSnap
+                "adpyke.codesnap",
+                //REST Client
+                "humao.rest-client",
+                //Path Intelisense
+                "christian-kohler.path-intellisense",
+                //Live Server #ホットリロードがない場合に解放
+                //"ritwickdey.LiveServer",
+                //Live Share
+                "ms-vsliveshare.vsliveshare",
+                //GitHub Copilot
+                "GitHub.copilot",
+                //GitHub Copilot Labs
+                "GitHub.copilot-labs",
+                //GitHub.copilot-labs
+                "GitHub.copilot-nightly",
+                // ====================================
+                // 言語、ライブラリ
+                // ====================================
+                // ------------------------------------
+                // Vue
+                // ------------------------------------
+                //Vue Language Features (Volar)
+                //"Vue.volar",
+                //"dariofuzinato.vue-peek",
+                // ------------------------------------
+                // React
+                // ------------------------------------
+                //ES7+ React/Redux/React-Native snippets
+                "dsznajder.es7-react-js-snippets"
+                // ------------------------------------
+                // PHP
+                // ------------------------------------
+                //PHP Intelephense
+                //"bmewburn.vscode-intelephense-client",
+                //PHP Debug
+                //"xdebug.php-debug",
+                //PHP DocBlocker
+                //"neilbrayfield.php-docblocker",
+                // ------------------------------------
+                // Laravel
+                // ------------------------------------
+                //"onecentlin.laravel-extension-pack"
+                // ------------------------------------
+                // Tailwind
+                // ------------------------------------
+                //Tailwind CSS InteliSense
+                //"bradlc.vscode-tailwindcss",
+                // ------------------------------------
+                // Prisma
+                // ------------------------------------
+                //Prisma
+                //"Prisma.prisma"
+            ]
+        }
+    },
+    //"postCreateCommand": "chmod -R 777 /var/www/html",
+    "remoteUser": "root"
+}
